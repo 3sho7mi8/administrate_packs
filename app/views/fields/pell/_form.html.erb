@@ -1,0 +1,11 @@
+<div class="field-unit__label">
+  <%= f.label field.attribute %>
+</div>
+<div class="field-unit__field">
+  <div id="pell" class="pell"></div>
+  <%= f.text_area field.attribute, class: 'pell-field' %>
+  <div class="pell-function">
+    <%= button_tag 'VIEW HTML', type: 'button', class: 'pell-switch' %>
+    <div class="pell-count">0</div>
+  </div>
+</div>

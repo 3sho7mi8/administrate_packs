@@ -1,0 +1,355 @@
+@import "font-awesome-sprockets"
+@import "font-awesome"
+
+// font
+$base-font-size: 1.0rem
+
+// color
+$base-color: #676666
+$reversal-color: #FFFFFF
+$button-color: #01579B
+
+// bleak-point
+$mobile: 414px - 1
+$phone: 768px - 1
+$ipad-pro: 1024px
+$tablet: 992px - 1
+$desktop: 1280 - 1
+$wide-desktop: 9999px
+
+// mixin
+=media($break-point)
+  @media screen and (max-width: $break-point)
+    @content
+
+=symbol($value)
+  content: $value
+  padding: 1px 3px
+  font-size: $base-font-size - .5rem
+  background-color: $base-color
+  color: $reversal-color
+  border-radius: 3px
+  margin-right: 5px
+
+body
+  font-size: 62.5%
+  color: $base-color
+
+.app-container
+  font-size: 1.2em
+
+td img
+  max-height: 100%
+
+input[type="file"], input[type="search"]
+  font-size: 1em
+
+input[type="text"]
+  font-size: $base-font-size - .1rem
+  padding: 10px
+
+input[type="file"]
+  padding: 5px
+  border-radius: 5px
+  border: 1px solid $base-color
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button
+  background-color: $button-color
+  border: 1px solid $button-color
+  &:hover
+    color: $button-color
+    background-color: $reversal-color
+    transition: .5s
+
+.field-unit__field
+  width: 100%
+  max-width: 650px
+  position: relative
+  textarea
+    min-height: 100px
+    padding: 10px
+    font-size: $base-font-size - .1rem
+    line-height: 1.5
+
+.field-unit__field select
+  font-size: 1em
+
+.navigation__link
+  text-decoration: none
+  color: $base-color
+  padding: 10px
+  width: 100%
+  margin-left: 0 !important
+  border-radius: 3px
+  &:hover
+    color: $reversal-color
+    background-color: $base-color
+    border-radius: 3px
+
+.administrate-navigation__footer
+  border-top: 1px solid #ccc
+  padding-top: 20px
+  margin-top: 20px
+
+.administrate-navigation__link
+  display: block
+  padding: 10px
+  border-radius: 3px
+  text-decoration: none
+  background-color: $base-color
+  color: $reversal-color
+  position: relative
+  &:hover
+    background-color: $reversal-color
+    color: $base-color
+    transition: 0.5s
+  &:before
+    content: "\f206"
+    font-family: FontAwesome
+    padding-right: 5px
+    font-size: 16px
+
+.pagination
+  font-size: $base-font-size - .2rem
+  padding-top: 20px
+  margin-top: 20px
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  .page, .first, .prev, .next, .last
+    margin: 0
+  span
+    border: 1px solid $base-color
+    &:not(:last-child)
+      border-right: none
+    &:first-child
+      border-top-left-radius: 3px
+      border-bottom-left-radius: 3px
+    &:last-child
+      border-top-right-radius: 3px
+      border-bottom-right-radius: 3px
+    a
+      text-decoration: none
+      padding: 5px 10px
+      display: block
+      &:hover
+        background-color: $base-color
+        color: $reversal-color
+        opacity: 1
+  .current
+    margin: 0
+    padding: 5px 10px
+    background-color: $base-color
+    color: $reversal-color
+
+.attribute-data--paperclip
+  max-width: 700px
+
+.attribute-data--text,
+.attribute-data--text-editor,
+.pell-content
+  max-width: 700px
+  line-height: 1.8
+  letter-spacing: .01rem
+  h2
+    border-bottom: 3px solid $base-color
+    padding: 10px 0
+    margin-top: 35px
+    margin-bottom: 25px
+  h3
+    border-left: 3px solid $base-color
+    padding-left: 20px
+    margin-bottom: 10px
+  ul, ol, dl
+    background-color: #FAFAFA
+    margin: 0
+    padding: 20px
+    padding-left: 40px
+    margin-bottom: 10px
+  img
+    width: 100%
+
+// NESTED FIELD
+
+.nested
+  width: 100%
+  max-width: 700px
+  border: 1px dotted $base-color
+  padding-top: 20px
+  margin: 0 auto
+  margin-top: 20px
+  padding: 20px 40px
+  border-radius: 5px
+  input[type="text"]
+    font-size: 13px
+    padding: 10px
+
+.nested__header
+  &:after
+    content: 'コソコソTIPS: 「URL」のみの入力でその他情報は自動取得されます'
+    display: block
+    margin-top: 10px
+    margin-bottom: 20px
+    background-color: $base-color
+    color: #FFF
+    padding: 5px 10px
+    border-radius: 5px
+
+.nested-fields
+  margin-bottom: 20px
+  border-radius: 5px
+  padding: 20px 40px
+  background-color: #FAFAFA
+
+
+// PELL EDITOR
+
+.pell-content
+  box-sizing: border-box
+  outline: 0
+  overflow-y: auto
+  width: 100%
+
+.pell-button
+  color: $base-color
+  &:hover
+    background-color: transparent
+    color: $base-color
+    opacity: .5
+
+.pell-output
+  width: 100%
+  word-wrap: break-word
+  margin-top: 20px
+
+.pell-field
+  display: none
+  position: absolute
+  top: 0
+  font-size: $base-font-size - .2rem !important
+  box-shadow: 0 0 5px
+
+.pell-function
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 10px
+
+.pell-switch
+  background-color: $base-color
+  border: 1px solid $base-color
+  &:hover
+    background-color: $reversal-color
+    color: $base-color
+
+.pell-count
+  padding: 5px 10px
+  border: 1px solid #dfe0e1
+  border-radius: 5px
+
+.pell-content
+  p
+    &:before
+      +symbol('P')
+  h2
+    &:before
+      +symbol('H2')
+  h3
+    &:before
+      +symbol('H3')
+  ul
+    &:before
+      +symbol('UL')
+  ol
+    &:before
+      +symbol('OL')
+  dl
+    &:before
+      +symbol('DL')
+  li
+    &:before
+      +symbol('LI')
+  img
+    &:before
+      +symbol('IMG')
+  div
+    &:before
+      +symbol('DIV')
+
++media($phone)
+  .app-container
+    padding: 0
+    margin-top: 120px
+    th, td
+      padding: 10px 5px !important
+      max-width: 100px
+  .cell-label, .cell-data
+    &:nth-of-type(n+4)
+      display: none
+  .navigation
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    position: fixed
+    align-items: center
+    top: 0
+    background-color: $base-color
+    z-index: 1000
+    padding: 10px
+    padding-bottom: 0
+  .navigation__link
+    width: auto
+    color: $base-color
+    padding: 5px 10px
+    line-height: 1.5
+    background-color: #FFF
+    margin-right: 10px
+    margin-bottom: 10px !important
+  .field-unit
+    display: block
+  .field-unit__label
+    margin: 0
+    width: auto
+    margin-bottom: 10px
+  .field-unit__field
+    margin: 0
+    margin-bottom: 10px
+  .administrate-navigation__footer
+    margin: 0
+    padding: 0
+    border: unset
+  .administrate-navigation__link
+    padding: 0
+    background-color: unset
+    border-left: 3px solid #FFF
+    border-radius: 0
+    padding-left: 10px
+    line-height: 1.5
+    margin-bottom: 10px
+  .main-content
+    width: 100%
+  .main-content__header
+    display: block
+    .button
+      width: 100%
+      padding: 10px
+      margin-top: 10px
+  .main-content__page-title
+    font-size: $base-font-size
+    margin-bottom: 10px
+  .nested
+    padding: 10px
+    input[type="text"]
+      font-size: 12px
+      padding: 8px
+  .nested-fields
+    padding: 10px
+  .nested__header
+    &:after
+      background-color: $base-color
+      padding: 5px 10px
+      border-radius: 5px
