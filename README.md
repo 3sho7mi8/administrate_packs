@@ -1,8 +1,8 @@
-# AdministratePacks
-Short description and motivation.
+# Administrate Packs
+Integrate Administrate Field Packs and Responsive Style.
+For myself.
 
 ## Usage
-How to use my plugin.
 
 ## Installation
 Add this line to your application's Gemfile:
@@ -16,10 +16,14 @@ And then execute:
 $ bundle
 ```
 
-Or install it yourself as:
-```bash
-$ gem install administrate_packs
+## Caution
+
+Change Uglifier harmony mode to true.
+
 ```
+config.assets.js_compressor = Uglifier.new(harmony: true)
+```
+
 
 ## Contributing
 Contribution directions go here.
