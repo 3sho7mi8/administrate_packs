@@ -1,5 +1,5 @@
-# Administrate Packs
-Integrate Administrate Field Packs and Responsive Style.
+# Pakupaku
+Integrate Administrate Fields and Responsive Style.
 For myself.
 
 ## Usage
@@ -8,7 +8,7 @@ For myself.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'administrate_packs'
+gem 'pakupaku'
 ```
 
 And then execute:

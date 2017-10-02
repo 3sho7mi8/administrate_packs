@@ -1,12 +1,12 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "administrate_packs/version"
+require "pakupaku/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "administrate_packs"
-  s.version     = AdministratePacks::VERSION
+  s.name        = "pakupaku"
+  s.version     = Pakupaku::VERSION
   s.authors     = ["3sho7mi8"]
   s.email       = ["hiro.pinot@gmail.com"]
   s.homepage    = "https://github.com/3sho7mi8"

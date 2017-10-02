@@ -4,5 +4,5 @@ require 'administrate/field/pell'
 require "administrate/engine"
 require "rails"
 
-module AdministratePacks
+module Pakupaku
 end
