@@ -16,15 +16,6 @@ And then execute:
 $ bundle
 ```
 
-## Caution
-
-Change Uglifier harmony mode to true.
-
-```
-config.assets.js_compressor = Uglifier.new(harmony: true)
-```
-
-
 ## Contributing
 Contribution directions go here.
 
